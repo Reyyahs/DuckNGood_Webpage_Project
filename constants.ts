@@ -9,6 +9,17 @@ import { Dish, DishCategory } from './types';
 export const APP_NAME = "DucknGood";
 
 /**
+ * Social Media Links
+ * 
+ * External links for social media platforms.
+ */
+export const SOCIAL_LINKS = {
+  instagram: 'https://instagram.com',
+  facebook: 'https://facebook.com',
+  twitter: 'https://twitter.com'
+};
+
+/**
  * AI System Instruction
  * 
  * Defines the persona and knowledge base for the Gemini AI Chatbot.

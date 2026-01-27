@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, Star, Award, Utensils, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { useMenu } from '@/context/MenuContext';
+import FeaturesSection from '@/components/FeaturesSection';
 import '@/app/styles/Home.css';
 
 // --- Static Data for Reviews ---
@@ -29,6 +30,30 @@ const REVIEWS = [
     text: "Lovely atmosphere and great food. The portions are generous. I wish I had saved more room for the lavender crème brûlée!",
     time: "2 weeks ago"
   }
+];
+
+// --- Features Data ---
+const FEATURES = [
+  {
+    icon: Utensils,
+    title: "Farm to Table",
+    description: "We partner with local free-range farms to ensure every ingredient is ethically sourced and of the highest quality."
+  },
+  {
+    icon: Award,
+    title: "Award Winning",
+    description: "Recognized by top culinary critics for our innovative approach to texture, flavor balance, and presentation."
+  },
+  {
+    icon: Star,
+    title: "World Class Service",
+    description: "Impeccable attention to detail. Our staff is dedicated to providing an unforgettable dining experience."
+  },
+{
+    icon: Star,
+    title: "Amazing Taste",
+    description: "Great things come from great taste. Our staff is dedicated to providing an unforgettable dining experience."
+  },
 ];
 
 export default function Home() {
@@ -125,39 +150,7 @@ export default function Home() {
       </section>
 
       {/* --- Features/Highlights Section --- */}
-      <section className="features-section section-padding">
-        <div className="container-custom">
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon-wrapper">
-                <Utensils size={32} />
-              </div>
-              <h3 className="feature-title">Farm to Table</h3>
-              <p className="feature-description">
-                We partner with local free-range farms to ensure every ingredient is ethically sourced and of the highest quality.
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon-wrapper">
-                <Award size={32} />
-              </div>
-              <h3 className="feature-title">Award Winning</h3>
-              <p className="feature-description">
-                Recognized by top culinary critics for our innovative approach to texture, flavor balance, and presentation.
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon-wrapper">
-                <Star size={32} />
-              </div>
-              <h3 className="feature-title">World Class Service</h3>
-              <p className="feature-description">
-                Impeccable attention to detail. Our staff is dedicated to providing an unforgettable dining experience.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FeaturesSection features={FEATURES} />
 
       {/* --- Featured Menu Carousel Section --- */}
       <section className="menu-preview-section section-padding">

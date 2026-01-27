@@ -28,7 +28,7 @@ export default function Menu() {
           </p>
         </div>
       </div>
-
+      
       {/* Sticky Category Filter */}
       <div className="filter-bar">
         <div className="filter-container">
