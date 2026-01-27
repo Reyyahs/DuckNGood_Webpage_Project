@@ -1,9 +1,9 @@
-import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
+import { GoogleGenAI, Chat, GenerateContentResponse } from '@google/genai';
 import { AI_SYSTEM_INSTRUCTION } from '../constants';
 
 /**
  * Gemini Service
- * 
+ *
  * Handles interaction with the Google Gemini API.
  * Manages the chat session state and sends messages to the model.
  */
@@ -32,7 +32,7 @@ class GeminiService {
 
   /**
    * Sends a user message to the Gemini model and returns the text response.
-   * 
+   *
    * @param message - The user's input text
    * @returns The model's response text
    */
@@ -41,18 +41,18 @@ class GeminiService {
       // Auto-initialize if not ready
       this.initChat();
     }
-    
+
     // Safety check in case initialization failed
     if (!this.chat) {
-      return "I apologize, but my connection to the kitchen is currently down. Please try again later.";
+      return 'I apologize, but my connection to the kitchen is currently down. Please try again later.';
     }
 
     try {
       const response: GenerateContentResponse = await this.chat.sendMessage({ message });
       return response.text || "I'm having trouble thinking of a response right now.";
     } catch (error) {
-      console.error("Gemini API Error:", error);
-      return "I apologize, I am experiencing a momentary lapse in concentration. Please ask me again.";
+      console.error('Gemini API Error:', error);
+      return 'I apologize, I am experiencing a momentary lapse in concentration. Please ask me again.';
     }
   }
 }

@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Lock } from 'lucide-react';
-import { SOCIAL_LINKS } from '../constants';
+import { SOCIAL_LINKS } from '../../lib/constants';
 import './Footer.css';
 
 export default function Footer() {
@@ -11,22 +11,40 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content-wrapper">
         <div className="footer-grid">
-          
           <div className="footer-brand-col">
             <h3 className="footer-brand-text">
               Duck<span className="text-accent-500">n</span>Good
             </h3>
             <p className="footer-description">
-              Experience the pinnacle of poultry perfection. Sustainable sourcing, modern techniques, and timeless flavors.
+              Experience the pinnacle of poultry perfection. Sustainable sourcing, modern
+              techniques, and timeless flavors.
             </p>
             <div className="footer-socials">
-              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-icon-link">
+              <a
+                href={SOCIAL_LINKS.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="social-icon-link"
+              >
                 <Instagram size={20} />
               </a>
-              <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-icon-link">
+              <a
+                href={SOCIAL_LINKS.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="social-icon-link"
+              >
                 <Facebook size={20} />
               </a>
-              <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="social-icon-link">
+              <a
+                href={SOCIAL_LINKS.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="social-icon-link"
+              >
                 <Twitter size={20} />
               </a>
             </div>
@@ -35,10 +53,26 @@ export default function Footer() {
           <div>
             <h4 className="footer-heading">Explore</h4>
             <ul className="footer-list">
-              <li><Link href="/" className="footer-link">Home</Link></li>
-              <li><Link href="/menu" className="footer-link">Full Menu</Link></li>
-              <li><Link href="/careers" className="footer-link">Careers</Link></li>
-              <li><Link href="/contact" className="footer-link">Contact Us</Link></li>
+              <li>
+                <Link href="/" className="footer-link">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/menu" className="footer-link">
+                  Full Menu
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="footer-link">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="footer-link">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -47,7 +81,11 @@ export default function Footer() {
             <ul className="footer-list">
               <li className="contact-item">
                 <MapPin className="contact-icon" />
-                <span>123 Culinary Ave,<br />Food District, FD 90210</span>
+                <span>
+                  123 Culinary Ave,
+                  <br />
+                  Food District, FD 90210
+                </span>
               </li>
               <li className="contact-item center-align">
                 <Phone className="contact-icon" />
@@ -82,8 +120,12 @@ export default function Footer() {
         <div className="footer-bottom">
           <p className="copyright">© 2024 DucknGood Restaurant. All rights reserved.</p>
           <div className="legal-links">
-            <a href="#" className="legal-link">Privacy Policy</a>
-            <a href="#" className="legal-link">Terms of Service</a>
+            <a href="#" className="legal-link">
+              Privacy Policy
+            </a>
+            <a href="#" className="legal-link">
+              Terms of Service
+            </a>
             <Link href="/admin" className="legal-link admin-link">
               <Lock size={12} /> Admin
             </Link>

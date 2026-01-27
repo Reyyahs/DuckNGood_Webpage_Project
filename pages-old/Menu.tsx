@@ -5,7 +5,7 @@ import './Menu.css';
 
 /**
  * Menu Page Component
- * 
+ *
  * Displays the full list of menu items fetched from the MenuContext.
  * Features a sticky category filter bar.
  */
@@ -17,9 +17,8 @@ export const Menu: React.FC = () => {
   const categories = ['All', ...Object.values(DishCategory)];
 
   // Filter items based on selected category
-  const filteredItems = activeCategory === 'All' 
-    ? items 
-    : items.filter(item => item.category === activeCategory);
+  const filteredItems =
+    activeCategory === 'All' ? items : items.filter(item => item.category === activeCategory);
 
   return (
     <div className="menu-page">
@@ -37,7 +36,7 @@ export const Menu: React.FC = () => {
       <div className="filter-bar">
         <div className="filter-container">
           <div className="filter-scroll">
-            {categories.map((cat) => (
+            {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat as DishCategory | 'All')}
@@ -56,33 +55,19 @@ export const Menu: React.FC = () => {
           {filteredItems.map((item: Dish) => (
             <div key={item.id} className="menu-item animate-slide-up">
               <div className="menu-item-image-wrapper">
-                <img 
-                  src={item.image} 
-                  alt={item.name} 
-                  className="menu-item-image"
-                />
+                <img src={item.image} alt={item.name} className="menu-item-image" />
               </div>
               <div className="menu-item-content">
                 <div className="menu-item-header">
-                  <h3 className="menu-item-title">
-                    {item.name}
-                  </h3>
+                  <h3 className="menu-item-title">{item.name}</h3>
                   <span className="menu-item-price">${item.price}</span>
                 </div>
-                <p className="menu-item-desc">
-                  {item.description}
-                </p>
+                <p className="menu-item-desc">{item.description}</p>
                 {/* Dietary Tags */}
                 <div className="tags">
-                  {item.isGlutenFree && (
-                    <span className="tag tag-gf">GF</span>
-                  )}
-                  {item.isVegetarian && (
-                    <span className="tag tag-veg">Veg</span>
-                  )}
-                  {item.isSpicy && (
-                    <span className="tag tag-spicy">Spicy</span>
-                  )}
+                  {item.isGlutenFree && <span className="tag tag-gf">GF</span>}
+                  {item.isVegetarian && <span className="tag tag-veg">Veg</span>}
+                  {item.isSpicy && <span className="tag tag-spicy">Spicy</span>}
                 </div>
               </div>
             </div>
@@ -97,7 +82,7 @@ export const Menu: React.FC = () => {
         )}
 
         <div className="mt-12 mb-8 pt-8 border-t border-gray-800 text-center">
-            <p className="text-gray-500 text-sm italic">* All prices do not reflect taxes.</p>
+          <p className="text-gray-500 text-sm italic">* All prices do not reflect taxes.</p>
         </div>
       </div>
     </div>

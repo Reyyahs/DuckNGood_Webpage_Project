@@ -9,12 +9,14 @@ Your DuckNGood restaurant website has been successfully migrated from **Vite + R
 ## Key Changes Made
 
 ### 1. **Framework Migration**
+
 - **From:** Vite (development server) + React Router DOM
 - **To:** Next.js 15.5.10 with App Router
 
 ### 2. **Project Structure**
 
 #### New Directory Layout:
+
 ```
 app/
 ├── layout.tsx              # Root layout with MenuProvider
@@ -59,20 +61,24 @@ next.config.js         # Next.js configuration
 ### 3. **Component Updates**
 
 #### **Navbar Component**
+
 - Replaced `useLocation()` with `usePathname()` from Next.js
 - Changed `Link` from `react-router-dom` to `next/link`
 - Updated active route detection logic
 
 #### **Footer Component**
+
 - Replaced React Router `Link` with Next.js `Link`
 - Maintained all styling and layout
 
 #### **ChatWidget Component**
+
 - Updated imports to use `@/services/gemini`
 - Maintained Gemini AI integration
 - All chat functionality preserved
 
 #### **Layout (app/layout.tsx)**
+
 - Added `usePathname` for admin route detection
 - Wrapped with `'use client'` directive for client-side functionality
 - Integrated MenuProvider and global components
@@ -81,6 +87,7 @@ next.config.js         # Next.js configuration
 ### 4. **Pages Migration**
 
 All pages converted to Next.js App Router:
+
 - **Home** (`/`) - Hero section, featured dishes carousel, reviews
 - **Menu** (`/menu`) - Category filtering, dish display
 - **Contact** (`/contact`) - Location and contact info
@@ -101,12 +108,15 @@ All pages converted to Next.js App Router:
 ## Development & Deployment
 
 ### Running the Development Server:
+
 ```bash
 npm run dev
 ```
+
 The application will be available at `http://localhost:3000`
 
 ### Building for Production:
+
 ```bash
 npm run build
 npm start
@@ -128,6 +138,7 @@ npm start
 ## File Structure Changes
 
 ### Old Files (Renamed/Removed):
+
 - `App.tsx` → `App.tsx.old`
 - `index.tsx` → `index.tsx.old`
 - `index.html` → `index.html.old`
@@ -135,12 +146,15 @@ npm start
 - `pages/` → `pages-old/` (kept as reference)
 
 ### Dependencies Updated:
+
 **Removed:**
+
 - `vite`
 - `@vitejs/plugin-react`
 - `react-router-dom`
 
 **Added:**
+
 - `next` (v15.5.10)
 
 ---

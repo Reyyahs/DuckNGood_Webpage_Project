@@ -3,16 +3,12 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { MenuProvider } from '@/context/MenuContext';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import ChatWidget from '@/components/ChatWidget';
 import '@/styles.css';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdminRoute = pathname?.startsWith('/admin') || false;
 
@@ -28,9 +24,7 @@ export default function RootLayout({
         <MenuProvider>
           <div className="flex flex-col min-h-screen bg-dark-900 text-slate-100 font-sans selection:bg-brand-500 selection:text-white">
             {!isAdminRoute && <Navbar />}
-            <main className={`flex-grow ${!isAdminRoute ? 'pt-20' : ''}`}>
-              {children}
-            </main>
+            <main className={`flex-grow ${!isAdminRoute ? 'pt-20' : ''}`}>{children}</main>
             {!isAdminRoute && (
               <>
                 <Footer />

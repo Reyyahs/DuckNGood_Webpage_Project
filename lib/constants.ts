@@ -1,27 +1,27 @@
-import { Dish, DishCategory } from './types';
+import { Dish, DishCategory } from '../types';
 
 /**
  * Application Constants
- * 
+ *
  * Stores static configuration, initial data, and system prompts.
  */
 
-export const APP_NAME = "DucknGood";
+export const APP_NAME = 'DucknGood';
 
 /**
  * Social Media Links
- * 
+ *
  * External links for social media platforms.
  */
 export const SOCIAL_LINKS = {
   instagram: 'https://instagram.com',
   facebook: 'https://facebook.com',
-  twitter: 'https://twitter.com'
+  twitter: 'https://twitter.com',
 };
 
 /**
  * AI System Instruction
- * 
+ *
  * Defines the persona and knowledge base for the Gemini AI Chatbot.
  * It provides context about the menu, location, and tone of voice.
  */
@@ -51,7 +51,7 @@ Style Guide:
 
 /**
  * Initial Menu Data
- * 
+ *
  * Populates the MenuContext with default items.
  */
 export const MENU_ITEMS: Dish[] = [
@@ -59,11 +59,12 @@ export const MENU_ITEMS: Dish[] = [
   {
     id: 's1',
     name: 'Duck Rillettes',
-    description: 'Slow-cooked shredded duck leg with aromatic herbs, served with toasted sourdough and cornichons.',
+    description:
+      'Slow-cooked shredded duck leg with aromatic herbs, served with toasted sourdough and cornichons.',
     price: 18,
     category: DishCategory.STARTERS,
     image: 'https://picsum.photos/id/102/800/600',
-    featured: true
+    featured: true,
   },
   {
     id: 's2',
@@ -71,35 +72,38 @@ export const MENU_ITEMS: Dish[] = [
     description: 'House-made terrine with fig jam and brioche.',
     price: 26,
     category: DishCategory.STARTERS,
-    image: 'https://picsum.photos/id/292/800/600'
+    image: 'https://picsum.photos/id/292/800/600',
   },
   {
     id: 's3',
     name: 'Crispy Duck Skin Salad',
-    description: 'Augula, pomegranate, roasted pecans, and crispy duck skin cracklings with orange vinaigrette.',
+    description:
+      'Augula, pomegranate, roasted pecans, and crispy duck skin cracklings with orange vinaigrette.',
     price: 16,
     category: DishCategory.STARTERS,
     image: 'https://picsum.photos/id/493/800/600',
-    isGlutenFree: true
+    isGlutenFree: true,
   },
   // --- Mains ---
   {
     id: 'm1',
     name: 'Signature Roasted Duck',
-    description: 'Dry-aged for 7 days, glazed with lavender honey and roasted to perfection. Served with roasted root vegetables.',
+    description:
+      'Dry-aged for 7 days, glazed with lavender honey and roasted to perfection. Served with roasted root vegetables.',
     price: 42,
     category: DishCategory.MAINS,
     image: 'https://picsum.photos/id/431/800/600',
     featured: true,
-    isGlutenFree: true
+    isGlutenFree: true,
   },
   {
     id: 'm2',
     name: 'Duck Confit',
-    description: 'Traditional french preparation, crispy skin leg served over truffled mashed potatoes.',
+    description:
+      'Traditional french preparation, crispy skin leg served over truffled mashed potatoes.',
     price: 36,
     category: DishCategory.MAINS,
-    image: 'https://picsum.photos/id/835/800/600'
+    image: 'https://picsum.photos/id/835/800/600',
   },
   {
     id: 'm3',
@@ -107,7 +111,7 @@ export const MENU_ITEMS: Dish[] = [
     description: 'Handmade pappardelle, creamy mushroom sauce, spinach, and smoked duck slices.',
     price: 32,
     category: DishCategory.MAINS,
-    image: 'https://picsum.photos/id/412/800/600'
+    image: 'https://picsum.photos/id/412/800/600',
   },
   // --- Desserts ---
   {
@@ -117,7 +121,7 @@ export const MENU_ITEMS: Dish[] = [
     price: 14,
     category: DishCategory.DESSERTS,
     image: 'https://picsum.photos/id/1060/800/600',
-    isVegetarian: true
+    isVegetarian: true,
   },
   {
     id: 'd2',
@@ -127,7 +131,7 @@ export const MENU_ITEMS: Dish[] = [
     category: DishCategory.DESSERTS,
     image: 'https://picsum.photos/id/1080/800/600',
     isVegetarian: true,
-    isGlutenFree: true
+    isGlutenFree: true,
   },
   // --- Drinks ---
   {
@@ -136,7 +140,7 @@ export const MENU_ITEMS: Dish[] = [
     description: 'Duck fat washed bourbon, maple syrup, bitters, orange zest.',
     price: 18,
     category: DishCategory.DRINKS,
-    image: 'https://picsum.photos/id/999/800/600'
+    image: 'https://picsum.photos/id/999/800/600',
   },
   {
     id: 'dr2',
@@ -144,6 +148,6 @@ export const MENU_ITEMS: Dish[] = [
     description: 'Glass of our house reserve Pinot Noir, perfect pairing for duck.',
     price: 15,
     category: DishCategory.DRINKS,
-    image: 'https://picsum.photos/id/296/800/600'
-  }
+    image: 'https://picsum.photos/id/296/800/600',
+  },
 ];

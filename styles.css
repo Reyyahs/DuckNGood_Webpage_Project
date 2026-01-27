@@ -18,10 +18,10 @@
   --color-accent-400: #f87171;
   --color-accent-500: #ef4444;
   --color-accent-600: #dc2626;
-  
+
   --color-dark-800: #171717;
   --color-dark-900: #0a0a0a;
-  
+
   --font-serif: 'Playfair Display', 'Georgia', 'serif';
   --font-sans: 'Plus Jakarta Sans', 'system-ui', 'sans-serif';
 }
@@ -31,14 +31,14 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-dark-900); 
+  background: var(--color-dark-900);
 }
 ::-webkit-scrollbar-thumb {
-  background: #333; 
+  background: #333;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-600); 
+  background: var(--color-brand-600);
 }
 
 body {

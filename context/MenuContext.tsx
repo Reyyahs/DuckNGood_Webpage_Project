@@ -2,11 +2,11 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Dish } from '../types';
-import { MENU_ITEMS } from '../constants';
+import { MENU_ITEMS } from '../lib/constants';
 
 /**
  * Menu Context
- * 
+ *
  * Provides global state management for menu items.
  * FEATURES:
  * - CRUD operations for dishes.
@@ -35,7 +35,7 @@ export const MenuProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       const saved = localStorage.getItem(STORAGE_KEY);
       return saved ? JSON.parse(saved) : MENU_ITEMS;
     } catch (error) {
-      console.error("Failed to load menu from storage", error);
+      console.error('Failed to load menu from storage', error);
       return MENU_ITEMS;
     }
   });
@@ -45,22 +45,22 @@ export const MenuProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     } catch (error) {
-      console.error("Failed to save menu to storage", error);
+      console.error('Failed to save menu to storage', error);
     }
   }, [items]);
 
   // --- Actions ---
 
   const addDish = (dish: Dish) => {
-    setItems((prev) => [...prev, dish]);
+    setItems(prev => [...prev, dish]);
   };
 
   const updateDish = (updatedDish: Dish) => {
-    setItems((prev) => prev.map((item) => (item.id === updatedDish.id ? updatedDish : item)));
+    setItems(prev => prev.map(item => (item.id === updatedDish.id ? updatedDish : item)));
   };
 
   const deleteDish = (id: string) => {
-    setItems((prev) => prev.filter((item) => item.id !== id));
+    setItems(prev => prev.filter(item => item.id !== id));
   };
 
   return (

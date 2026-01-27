@@ -28,14 +28,23 @@
 }
 
 @keyframes kenBurns {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.15); }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
 }
 
 .hero-overlay-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--color-dark-900) 5%, rgba(10, 10, 10, 0.4) 50%, rgba(10, 10, 10, 0.3));
+  background: linear-gradient(
+    to top,
+    var(--color-dark-900) 5%,
+    rgba(10, 10, 10, 0.4) 50%,
+    rgba(10, 10, 10, 0.3)
+  );
 }
 
 .hero-content {
@@ -72,7 +81,7 @@
   margin-bottom: 1.5rem;
   line-height: 1.05;
   font-size: 3.5rem;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -100,7 +109,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -129,7 +138,7 @@
   background-color: var(--color-brand-500);
   color: var(--color-dark-900);
   border-radius: 0; /* Sharp corners for luxury feel, or small radius */
-  border-radius: 0.5rem; 
+  border-radius: 0.5rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -144,8 +153,8 @@
 
 .btn-outline {
   padding: 1rem 2.5rem;
-  background-color: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);
   color: white;
   border-radius: 0.5rem;
@@ -220,7 +229,7 @@
 /* Menu Preview Section (Carousel) */
 .menu-preview-section {
   background-color: #050505;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .section-header {
@@ -256,7 +265,7 @@
 /* Carousel Styles */
 .carousel-wrapper {
   position: relative;
-  max-width: 72rem; 
+  max-width: 72rem;
   margin: 0 auto;
 }
 
@@ -286,7 +295,7 @@
   border-radius: 1.5rem;
   transition: all 0.3s;
   height: 100%;
-  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column; /* Default for mobile */
 }
@@ -294,7 +303,7 @@
 @media (min-width: 1024px) {
   .dish-card.carousel-mode {
     flex-direction: row;
-    align-items: stretch; 
+    align-items: stretch;
     min-height: 550px;
   }
 }
@@ -315,7 +324,7 @@
 @media (min-width: 1024px) {
   .dish-image-container.carousel-mode-img {
     width: 55%;
-    height: auto; 
+    height: auto;
     flex-shrink: 0;
   }
 }
@@ -440,7 +449,7 @@
   z-index: 10;
   border: 1px solid rgba(234, 179, 8, 0.5);
   backdrop-filter: blur(4px);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .dish-link {
@@ -479,7 +488,7 @@
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
-  display: none; 
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -499,8 +508,12 @@
   transform: translateY(-50%) scale(1.1);
 }
 
-.carousel-btn.prev { left: -5rem; }
-.carousel-btn.next { right: -5rem; }
+.carousel-btn.prev {
+  left: -5rem;
+}
+.carousel-btn.next {
+  right: -5rem;
+}
 
 /* Reviews Section */
 .reviews-section {
@@ -513,8 +526,8 @@
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   margin-top: 2rem;
@@ -522,10 +535,18 @@
 }
 
 /* Google Logo Colors */
-.g-blue { color: #4285F4; }
-.g-red { color: #EA4335; }
-.g-yellow { color: #FBBC05; }
-.g-green { color: #34A853; }
+.g-blue {
+  color: #4285f4;
+}
+.g-red {
+  color: #ea4335;
+}
+.g-yellow {
+  color: #fbbc05;
+}
+.g-green {
+  color: #34a853;
+}
 
 .google-logo {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -574,12 +595,12 @@
 }
 
 .review-card {
-  background: linear-gradient(180deg, rgba(30,30,30,0.5) 0%, rgba(20,20,20,0.5) 100%);
+  background: linear-gradient(180deg, rgba(30, 30, 30, 0.5) 0%, rgba(20, 20, 20, 0.5) 100%);
   backdrop-filter: blur(10px);
   padding: 2.5rem;
   border-radius: 1.5rem;
   position: relative;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
@@ -588,7 +609,7 @@
 .review-card:hover {
   transform: translateY(-8px);
   border-color: rgba(234, 179, 8, 0.3);
-  background: linear-gradient(180deg, rgba(40,40,40,0.6) 0%, rgba(25,25,25,0.6) 100%);
+  background: linear-gradient(180deg, rgba(40, 40, 40, 0.6) 0%, rgba(25, 25, 25, 0.6) 100%);
 }
 
 .review-quote-icon {
@@ -683,10 +704,12 @@
   width: 100%;
   height: 100%;
   opacity: 0.1;
-  background-image: 
+  background-image:
     linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
     linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
-  background-position: 0 0, 10px 10px;
+  background-position:
+    0 0,
+    10px 10px;
   background-size: 20px 20px;
   pointer-events: none;
 }
