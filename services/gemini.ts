@@ -13,7 +13,7 @@ class GeminiService {
 
   constructor() {
     // Initialize the Gemini Client with the API Key from environment variables
-    this.ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    this.ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY || '' });
   }
 
   /**

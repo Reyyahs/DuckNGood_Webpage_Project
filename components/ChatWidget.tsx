@@ -1,12 +1,10 @@
+'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Bot, User, Loader2 } from 'lucide-react';
-import { geminiService } from '../services/gemini';
+import { geminiService } from '@/services/gemini';
 import './ChatWidget.css';
 
-/**
- * Message Interface
- * Defines structure for chat messages.
- */
 interface Message {
   id: string;
   text: string;
@@ -14,19 +12,12 @@ interface Message {
   timestamp: Date;
 }
 
-/**
- * ChatWidget Component
- * 
- * Floating chat bubble that opens a chat window.
- * Integrates with GeminiService to provide AI-powered responses.
- */
-export const ChatWidget: React.FC = () => {
+export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Initial welcome message
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 'welcome',
@@ -36,7 +27,6 @@ export const ChatWidget: React.FC = () => {
     }
   ]);
 
-  // Auto-scroll to the bottom when new messages arrive or widget opens
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -45,12 +35,10 @@ export const ChatWidget: React.FC = () => {
     scrollToBottom();
   }, [messages, isOpen]);
 
-  // --- Message Handler ---
   const handleSendMessage = async (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!inputValue.trim()) return;
 
-    // 1. Add User Message
     const userMessage: Message = {
       id: Date.now().toString(),
       text: inputValue,
@@ -63,10 +51,8 @@ export const ChatWidget: React.FC = () => {
     setIsTyping(true);
 
     try {
-      // 2. Get Response from AI Service
       const responseText = await geminiService.sendMessage(userMessage.text);
       
-      // 3. Add Bot Message
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: responseText,
@@ -85,11 +71,9 @@ export const ChatWidget: React.FC = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       
-      {/* Expanded Chat Window */}
       {isOpen && (
         <div className="mb-4 w-[350px] max-w-[calc(100vw-3rem)] h-[500px] max-h-[70vh] bg-dark-800 border border-gray-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-slide-up origin-bottom-right">
           
-          {/* Window Header */}
           <div className="bg-brand-500 p-4 flex justify-between items-center text-dark-900">
             <div className="flex items-center gap-2">
               <Bot size={20} className="font-bold" />
@@ -104,20 +88,17 @@ export const ChatWidget: React.FC = () => {
             </button>
           </div>
 
-          {/* Messages Container */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-dark-900/50">
             {messages.map((msg) => (
               <div 
                 key={msg.id} 
                 className={`flex gap-2 ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
               >
-                {/* Avatar */}
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                   msg.sender === 'user' ? 'bg-gray-700' : 'bg-brand-500/20 text-brand-500'
                 }`}>
                   {msg.sender === 'user' ? <User size={14} /> : <Bot size={16} />}
                 </div>
-                {/* Text Bubble */}
                 <div className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${
                   msg.sender === 'user' 
                     ? 'bg-brand-500 text-dark-900 rounded-tr-none font-medium' 
@@ -128,7 +109,6 @@ export const ChatWidget: React.FC = () => {
               </div>
             ))}
             
-            {/* Typing Indicator */}
             {isTyping && (
               <div className="flex gap-2">
                 <div className="w-8 h-8 rounded-full bg-brand-500/20 text-brand-500 flex items-center justify-center flex-shrink-0">
@@ -144,7 +124,6 @@ export const ChatWidget: React.FC = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input Footer */}
           <form onSubmit={handleSendMessage} className="p-3 bg-dark-800 border-t border-gray-700 flex gap-2">
             <input 
               type="text" 
@@ -164,7 +143,6 @@ export const ChatWidget: React.FC = () => {
         </div>
       )}
 
-      {/* Floating Action Button (Toggle) */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
@@ -177,4 +155,4 @@ export const ChatWidget: React.FC = () => {
       </button>
     </div>
   );
-};
+}

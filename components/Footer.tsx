@@ -1,25 +1,16 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Lock } from 'lucide-react';
 import './Footer.css';
 
-/**
- * Footer Component
- * 
- * Displays site-wide footer information including:
- * - Brand description and social links
- * - Quick navigation links
- * - Contact information
- * - Opening hours
- * - Admin login link
- */
-export const Footer: React.FC = () => {
+export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content-wrapper">
         <div className="footer-grid">
           
-          {/* Brand & Socials */}
           <div className="footer-brand-col">
             <h3 className="footer-brand-text">
               Duck<span className="text-accent-500">n</span>Good
@@ -40,18 +31,16 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="footer-heading">Explore</h4>
             <ul className="footer-list">
-              <li><Link to="/" className="footer-link">Home</Link></li>
-              <li><Link to="/menu" className="footer-link">Full Menu</Link></li>
-              <li><Link to="/careers" className="footer-link">Careers</Link></li>
-              <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
+              <li><Link href="/" className="footer-link">Home</Link></li>
+              <li><Link href="/menu" className="footer-link">Full Menu</Link></li>
+              <li><Link href="/careers" className="footer-link">Careers</Link></li>
+              <li><Link href="/contact" className="footer-link">Contact Us</Link></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="footer-heading">Contact</h4>
             <ul className="footer-list">
@@ -70,7 +59,6 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Opening Hours */}
           <div>
             <h4 className="footer-heading">Opening Hours</h4>
             <ul className="footer-list">
@@ -90,13 +78,12 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Footer Bottom / Admin Link */}
         <div className="footer-bottom">
           <p className="copyright">© 2024 DucknGood Restaurant. All rights reserved.</p>
           <div className="legal-links">
             <a href="#" className="legal-link">Privacy Policy</a>
             <a href="#" className="legal-link">Terms of Service</a>
-            <Link to="/admin" className="legal-link admin-link">
+            <Link href="/admin" className="legal-link admin-link">
               <Lock size={12} /> Admin
             </Link>
           </div>
@@ -104,4 +91,4 @@ export const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+}
