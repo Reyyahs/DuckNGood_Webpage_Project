@@ -79,20 +79,15 @@ export default function Home() {
         <div className="hero-content animate-fade-zoom">
           <div className="hero-badge">
             <span className="hero-badge-line"></span>
-            <span className="hero-badge-text">Michelin Star Rated · Est. 2019</span>
+            <span className="hero-badge-text">Authentic Lao-Thai Cuisine · Est. 2019</span>
+            <span className="hero-badge-line"></span>
           </div>
           <h1 className="hero-title">
-            Where
-            <br />
-            French
-            <br />
-            <em>Craft</em>
-            <br />
-            Lives.
+            Where <em>Duck</em> Meets Tradition.
           </h1>
           <p className="hero-subtitle">
-            Traditional technique. Modern imagination. An unforgettable evening centred around the
-            finest poultry in the city.
+            Bold flavors rooted in Hmong heritage. From our signature roasted duck to hand-rolled
+            pho — every dish tells a story.
           </p>
           <div className="hero-buttons">
             <Link href="/menu" className="btn-primary">
