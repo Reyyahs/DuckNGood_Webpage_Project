@@ -81,9 +81,9 @@ export default function Footer() {
               <li className="contact-item">
                 <MapPin className="contact-icon" />
                 <span>
-                  123 Culinary Ave,
+                  3005 1st Ave SW,
                   <br />
-                  Food District, FD 90210
+                  Hickory, NC 28602
                 </span>
               </li>
               <li className="contact-item center-align">

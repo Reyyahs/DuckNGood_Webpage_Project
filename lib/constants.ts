@@ -24,7 +24,7 @@ Key Menu Highlights:
 - Drinks: Bubble Tea, Boba, Thai Tea, Mangonada, Sweet Tea, Hot Tea, and more.
 
 Restaurant Details:
-- Address: 123 Culinary Ave, Food District, FD 90210.
+- Address: 3005 1st Ave SW, Hickory, NC 28602.
 - Hours: Mon-Tues 11AM-8PM, Wed Closed, Thur-Sat 11AM-8PM, Sun 11AM-6PM.
 - Contact: +1 (555) 123-DUCK, hello@duckngood.com.
 

@@ -25,9 +25,9 @@ export default function Contact() {
               </div>
               <h3 className="info-card-title">Location</h3>
               <p className="info-card-text">
-                123 Culinary Ave,
+                3005 1st Ave SW,
                 <br />
-                Food District, FD 90210
+                Hickory, NC 28602
               </p>
             </div>
 
