@@ -1,32 +1,28 @@
 /**
  * Global Type Definitions
- *
- * This file contains TypeScript interfaces and enums used throughout the application
- * to ensure type safety for data structures like Menu Items.
  */
 
-/**
- * Enum for Dish Categories to ensure consistency in menu filtering.
- */
 export enum DishCategory {
-  STARTERS = 'Starters',
-  MAINS = 'Mains',
-  DESSERTS = 'Desserts',
+  NOODLES = 'Noodles',
+  APPETIZERS = 'Appetizers',
+  ENTREES = 'Duckn Entrees',
+  HOUSE_SPECIALS = 'House Specials',
+  TERIYAKI = 'Teriyaki',
+  FRIED_RICE = 'Fried Rice',
+  SIDES = 'Sides & Extras',
+  KIDS = 'Kids Menu',
   DRINKS = 'Drinks',
 }
 
-/**
- * Interface representing a single menu item (Dish).
- */
 export interface Dish {
-  id: string; // Unique identifier
-  name: string; // Name of the dish
-  description: string; // Short description of ingredients/preparation
-  price: number; // Cost in USD
-  category: DishCategory; // Category classification
-  image: string; // URL to the dish image
-  isSpicy?: boolean; // Dietary flag: Spicy
-  isVegetarian?: boolean; // Dietary flag: Vegetarian
-  isGlutenFree?: boolean; // Dietary flag: Gluten Free
-  featured?: boolean; // Flag to display on Home page highlights
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: DishCategory;
+  image: string;
+  isSpicy?: boolean;
+  isVegetarian?: boolean;
+  isGlutenFree?: boolean;
+  featured?: boolean;
 }

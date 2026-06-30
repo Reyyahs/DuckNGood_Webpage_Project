@@ -40,7 +40,7 @@ const INITIAL_DISH_STATE: Dish = {
   name: '',
   description: '',
   price: 0,
-  category: DishCategory.STARTERS,
+  category: DishCategory.NOODLES,
   image: 'https://picsum.photos/800/600',
   isSpicy: false,
   isVegetarian: false,

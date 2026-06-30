@@ -23,7 +23,7 @@ interface MenuContextType {
 // Create the Context
 const MenuContext = createContext<MenuContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'duckngood_menu_data_v1';
+const STORAGE_KEY = 'duckngood_menu_data_v2';
 
 /**
  * MenuProvider Component
