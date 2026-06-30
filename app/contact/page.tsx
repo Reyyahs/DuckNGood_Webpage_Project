@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="contact-header">
         <div className="contact-header-content">
           <h1 className="contact-title">Contact Us</h1>
-          <p className="contact-subtitle">We'd love to hear from you.</p>
+          <p className="contact-subtitle">We&apos;d love to hear from you.</p>
         </div>
       </div>
 
@@ -57,9 +57,13 @@ export default function Contact() {
               </div>
               <h3 className="info-card-title">Hours</h3>
               <p className="info-card-text">
-                Mon-Thu: 5pm - 10pm
+                Mon-Tues: 11AM - 8PM
                 <br />
-                Fri-Sat: 5pm - 11pm
+                Wed : Closed
+                <br />
+                Fri-Sat: 11AM - 8PM
+                <br />
+                Sun: 11AM - 6PM
               </p>
             </div>
           </div>

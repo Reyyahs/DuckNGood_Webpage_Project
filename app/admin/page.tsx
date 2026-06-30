@@ -120,6 +120,7 @@ export default function Admin() {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
   const showToast = (message: string, type: 'success' | 'error' = 'success') => {
+    // eslint-disable-next-line react-hooks/purity
     const id = Date.now();
     setToasts(prev => [...prev, { id, message, type }]);
     setTimeout(() => {
@@ -368,7 +369,7 @@ export default function Admin() {
                   <DollarSign size={24} />
                 </div>
                 <div>
-                  <p className="stat-label">Today's Revenue</p>
+                  <p className="stat-label">Today&apos;s Revenue</p>
                   <p className="stat-value">$1,248</p>
                 </div>
               </div>
