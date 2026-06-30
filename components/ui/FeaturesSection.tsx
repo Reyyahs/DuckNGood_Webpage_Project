@@ -12,33 +12,18 @@ export interface FeaturesSectionProps {
   className?: string;
 }
 
-export function FeatureCard({ icon: Icon, title, description }: FeatureCardProps) {
-  return (
-    <div className="feature-card">
-      <div className="feature-icon-wrapper">
-        <Icon size={32} />
-      </div>
-      <h3 className="feature-title">{title}</h3>
-      <p className="feature-description">{description}</p>
-    </div>
-  );
-}
+const EYEBROWS = ['Farm to Table', 'Award Winning', 'World Class', 'Curated Cellar'];
 
-export default function FeaturesSection({ features, className = '' }: FeaturesSectionProps) {
+export default function FeaturesSection({ features }: FeaturesSectionProps) {
   return (
-    <section className={`features-section section-padding ${className}`}>
-      <div className="container-custom">
-        <div className="features-grid">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-            />
-          ))}
+    <div className="features-strip">
+      {features.map((f, i) => (
+        <div key={i} className="features-strip-item">
+          <span className="features-strip-eyebrow">{EYEBROWS[i] ?? f.title}</span>
+          <h3 className="features-strip-title">{f.title}</h3>
+          <p className="features-strip-desc">{f.description}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 }
