@@ -20,6 +20,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsOpen(false);
   }, [pathname]);
 
@@ -52,6 +53,9 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
+            <Link href="/contact" className="nav-reserve-btn">
+              Reserve a Table
+            </Link>
           </div>
 
           <div className="mobile-menu-btn-wrapper">
