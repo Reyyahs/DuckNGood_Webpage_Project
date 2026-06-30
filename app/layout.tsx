@@ -6,6 +6,7 @@ import { MenuProvider } from '@/context/MenuContext';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import '@/styles.css';
+import '@/app/styles/Footer.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

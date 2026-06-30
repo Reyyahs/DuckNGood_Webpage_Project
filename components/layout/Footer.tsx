@@ -4,7 +4,6 @@ import React from 'react';
 import Link from 'next/link';
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Lock } from 'lucide-react';
 import { SOCIAL_LINKS } from '../../lib/constants';
-import './Footer.css';
 
 export default function Footer() {
   return (
@@ -102,16 +101,20 @@ export default function Footer() {
             <h4 className="footer-heading">Opening Hours</h4>
             <ul className="footer-list">
               <li className="hours-item">
-                <span>Mon - Thu</span>
-                <span className="hours-time">5:00 PM - 10:00 PM</span>
+                <span>Mon - Tues</span>
+                <span className="hours-time">11:00 AM - 8:00 PM</span>
               </li>
               <li className="hours-item">
-                <span>Fri - Sat</span>
-                <span className="hours-time">5:00 PM - 11:00 PM</span>
+                <span>Wednesday</span>
+                <span className="hours-time">Closed</span>
+              </li>
+              <li className="hours-item">
+                <span>Thur - Sat</span>
+                <span className="hours-time">11:00 AM - 8:00PM</span>
               </li>
               <li className="hours-item">
                 <span>Sun</span>
-                <span className="hours-time">4:00 PM - 9:30 PM</span>
+                <span className="hours-time">11:00 AM - 6:00PM</span>
               </li>
             </ul>
           </div>
