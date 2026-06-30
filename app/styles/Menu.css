@@ -157,6 +157,7 @@
   font-weight: 700;
   color: white;
   line-height: 1.2;
+  flex: 1;
 }
 
 .menu-item-price {
@@ -164,8 +165,11 @@
   font-weight: 600;
   color: var(--color-brand-500);
   font-family: var(--font-serif);
+  font-variant-numeric: tabular-nums;
   margin-left: 1.5rem;
   white-space: nowrap;
+  flex-shrink: 0;
+  text-align: right;
 }
 
 .menu-item-desc {

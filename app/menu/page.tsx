@@ -102,7 +102,9 @@ function MenuCard({ item }: { item: Dish }) {
         <div className="menu-item-header">
           <h3 className="menu-item-title">{item.name}</h3>
           <span className="menu-item-price">
-            {item.price > 0 ? `$${item.price}` : 'Ask server'}
+            {item.price > 0
+              ? item.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+              : 'Ask server'}
           </span>
         </div>
         <p className="menu-item-desc">{item.description}</p>
