@@ -99,20 +99,20 @@ function MenuCard({ item }: { item: Dish }) {
         <img src={item.image} alt={item.name} className="menu-item-image" />
       </div>
       <div className="menu-item-content">
-        <div className="menu-item-header">
-          <h3 className="menu-item-title">{item.name}</h3>
-          <span className="menu-item-price">
-            {item.price > 0
-              ? item.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-              : 'Ask server'}
-          </span>
-        </div>
+        <h3 className="menu-item-title">{item.name}</h3>
         <p className="menu-item-desc">{item.description}</p>
         <div className="tags">
           {item.isGlutenFree && <span className="tag tag-gf">GF</span>}
           {item.isVegetarian && <span className="tag tag-veg">Veg</span>}
           {item.isSpicy && <span className="tag tag-spicy">Spicy</span>}
         </div>
+      </div>
+      <div className="menu-item-price-col">
+        <span className="menu-item-price">
+          {item.price > 0
+            ? item.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+            : 'Ask server'}
+        </span>
       </div>
     </div>
   );
