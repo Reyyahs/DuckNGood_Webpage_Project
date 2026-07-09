@@ -68,18 +68,17 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Interactive Map Placeholder */}
+          {/* Google Map Embed */}
           <div className="map-container">
-            <img
-              src="https://picsum.photos/id/1048/800/600"
-              alt="Map Location"
-              className="map-image"
-            />
-            <div className="map-overlay">
-              <div className="map-label">
-                <p className="map-label-text">Interactive Map Placeholder</p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.9011115480794!2d-81.39148042421016!3d35.728650472572056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88512ef985a10a25%3A0x2afbd1e705ced568!2sDuck%20N&#39;%20Good%20Asian%20Cuisine!5e0!3m2!1sen!2sus!4v1782784177174!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            ></iframe>
           </div>
         </div>
       </div>
