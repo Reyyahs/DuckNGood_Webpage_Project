@@ -5,7 +5,6 @@ A modern, responsive web application for DuckNGood, a Michelin-starred French re
 ## 🚀 Features
 
 - **Modern UI**: Built with Next.js 15, React 19, and Tailwind CSS
-- **AI-Powered Chat**: Integrated Gemini AI chatbot for customer interactions
 - **Menu Management**: Dynamic menu system with admin panel
 - **Responsive Design**: Mobile-first design with touch-friendly interactions
 - **Type Safety**: Full TypeScript implementation
@@ -17,7 +16,6 @@ A modern, responsive web application for DuckNGood, a Michelin-starred French re
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
-- **AI Integration**: Google Gemini AI
 - **State Management**: React Context API
 - **Testing**: Jest + React Testing Library
 - **Code Quality**: ESLint + Prettier
@@ -43,25 +41,13 @@ A modern, responsive web application for DuckNGood, a Michelin-starred French re
    npm install
    ```
 
-3. **Set up environment variables**
-
-   ```bash
-   cp .env.example .env.local
-   ```
-
-   Edit `.env.local` and add your Gemini API key:
-
-   ```
-   NEXT_PUBLIC_GEMINI_API_KEY=your_api_key_here
-   ```
-
-4. **Run the development server**
+3. **Run the development server**
 
    ```bash
    npm run dev
    ```
 
-5. **Open your browser**
+4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📜 Available Scripts
@@ -93,9 +79,7 @@ A modern, responsive web application for DuckNGood, a Michelin-starred French re
 ├── context/               # React Context providers
 ├── hooks/                 # Custom React hooks
 ├── lib/                   # Utility libraries
-│   ├── constants.ts       # Application constants
-│   ├── env.ts            # Environment utilities
-│   └── services/         # External service integrations
+│   └── constants.ts       # Application constants
 ├── types/                 # TypeScript type definitions
 └── utils/                 # Utility functions
 ```
