@@ -23,6 +23,13 @@ out/
 .env
 .env*.local
 
+# Claude Code / agent tooling (local only, not part of the project)
+.claude/
+.agents/
+.mcp.json
+skills-lock.json
+docs/superpowers/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
