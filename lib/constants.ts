@@ -284,7 +284,7 @@ export const MENU_ITEMS: Dish[] = [
   // --- House Specials ---
   {
     id: 'h1',
-    name: 'Roasted Pecking Duck',
+    name: 'Roasted Peking Duck',
     description:
       'Whole roasted Peking-style duck with crispy skin. 1/4 $15.95 / 1/2 $25.95 / Whole $39.99',
     price: 15.95,

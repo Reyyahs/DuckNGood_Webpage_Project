@@ -15,8 +15,8 @@ export default function Footer() {
               Duck<span className="text-accent-500">n</span>Good
             </h3>
             <p className="footer-description">
-              Experience the pinnacle of poultry perfection. Sustainable sourcing, modern
-              techniques, and timeless flavors.
+              Authentic Lao-Thai cuisine and signature roasted duck. Bold flavors, fresh
+              ingredients, and recipes rooted in Hmong heritage.
             </p>
             <div className="footer-socials">
               <a
@@ -110,18 +110,20 @@ export default function Footer() {
               </li>
               <li className="hours-item">
                 <span>Thur - Sat</span>
-                <span className="hours-time">11:00 AM - 8:00PM</span>
+                <span className="hours-time">11:00 AM - 8:00 PM</span>
               </li>
               <li className="hours-item">
                 <span>Sun</span>
-                <span className="hours-time">11:00 AM - 6:00PM</span>
+                <span className="hours-time">11:00 AM - 6:00 PM</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p className="copyright">© 2024 DucknGood Restaurant. All rights reserved.</p>
+          <p className="copyright">
+            © {new Date().getFullYear()} DucknGood Restaurant. All rights reserved.
+          </p>
           <div className="legal-links">
             <a href="#" className="legal-link">
               Privacy Policy

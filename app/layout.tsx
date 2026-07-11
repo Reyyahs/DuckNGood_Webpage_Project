@@ -23,14 +23,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400&family=Jost:wght@300;400;500&display=swap"
           rel="stylesheet"
         />
-        <meta name="description" content="DuckNGood - Premium French Restaurant" />
-        <title>DuckNGood - Premium French Dining</title>
+        <meta
+          name="description"
+          content="DucknGood - Authentic Lao-Thai cuisine and signature roasted duck in Hickory, NC"
+        />
+        <title>DucknGood - Authentic Lao-Thai Cuisine</title>
       </head>
       <body>
         <MenuProvider>
-          <div className="flex flex-col min-h-screen bg-dark-900 text-slate-100 font-sans selection:bg-brand-500 selection:text-white">
+          <div className="flex flex-col min-h-screen bg-dark-900 font-sans selection:bg-brand-500 selection:text-white">
             {!isAdminRoute && <Navbar />}
-            <main className={`flex-grow ${!isAdminRoute ? 'pt-20' : ''}`}>{children}</main>
+            <main className="flex-grow">{children}</main>
             {!isAdminRoute && (
               <>
                 <Footer />

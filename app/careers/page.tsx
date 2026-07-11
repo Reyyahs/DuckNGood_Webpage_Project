@@ -24,7 +24,7 @@ const OPEN_POSITIONS: JobPosition[] = [
     requirements: [
       'Minimum 3 years experience in fine dining',
       'Strong leadership and communication skills',
-      'Deep knowledge of French cooking techniques',
+      'Deep knowledge of Lao, Thai, and Hmong cooking techniques',
       'Ability to work under pressure',
     ],
   },
@@ -48,7 +48,7 @@ const OPEN_POSITIONS: JobPosition[] = [
     type: 'Full-time',
     department: 'Front of House',
     description:
-      'Curate our wine list and guide guests through pairings. Must have extensive knowledge of French wines and spirits.',
+      'Curate our beverage program and guide guests through pairings. Must have strong knowledge of teas, beers, and specialty drinks.',
     requirements: [
       'Certified Sommelier qualification',
       'Excellent customer service skills',
@@ -79,8 +79,8 @@ export default function Careers() {
               <ChefHat size={32} className="benefit-icon" />
               <h3>Learn from the Best</h3>
               <p>
-                Work under renowned chefs in a Michelin-rated kitchen and develop world-class
-                techniques.
+                Work alongside experienced chefs in an authentic scratch kitchen and develop real
+                Lao-Thai culinary techniques.
               </p>
             </div>
 

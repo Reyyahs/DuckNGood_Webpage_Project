@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Star, Award, Utensils } from 'lucide-react';
+import { Star, Award, Utensils, Flame } from 'lucide-react';
 import Link from 'next/link';
 import { useMenu } from '@/context/MenuContext';
 import FeaturesSection from '@/components/ui/FeaturesSection';
@@ -12,21 +12,21 @@ const REVIEWS = [
     id: 1,
     author: 'Sophie Morel',
     rating: 5,
-    text: 'The roasted duck was absolutely divine! The skin was perfectly crispy and the meat tender. Best French dining experience in the city.',
+    text: 'The roast duck pho was absolutely divine! The broth was rich and aromatic and the duck was tender with perfectly crispy skin. Best Lao-Thai food in the area.',
     time: '2 days ago',
   },
   {
     id: 2,
     author: 'James Thornton',
     rating: 5,
-    text: 'Impeccable service and a wine list to die for. The Duck Confit is a must-try. Will definitely be returning for our anniversary.',
+    text: 'Impeccable service and so much flavor. The papaya salad and Hmong sausage are a must-try. Will definitely be returning for our anniversary.',
     time: '1 week ago',
   },
   {
     id: 3,
     author: 'Elena Rodriguez',
     rating: 5,
-    text: 'Lovely atmosphere and great food. The portions are generous. I wish I had saved more room for the lavender crème brûlée!',
+    text: 'Lovely atmosphere and great food. The portions are generous. I wish I had saved more room for the Thai iced tea and bubble tea!',
     time: '2 weeks ago',
   },
 ];
@@ -51,10 +51,10 @@ const FEATURES = [
       'Impeccable attention to detail. Our staff is dedicated to providing an unforgettable dining experience.',
   },
   {
-    icon: Star,
-    title: 'Amazing Taste',
+    icon: Flame,
+    title: 'Bold Flavors',
     description:
-      'Great things come from great taste. Our staff is dedicated to providing an unforgettable dining experience.',
+      'Lemongrass, lime, chili, and toasted rice — the vibrant, aromatic flavors of Lao, Thai, and Hmong home cooking.',
   },
 ];
 
@@ -185,7 +185,7 @@ export default function Home() {
           <em>Excellence</em>
         </h2>
         <p className="cta-text-new">
-          Experience why DucknGood is the city&apos;s premier destination for modern poultry
+          Experience why DucknGood is the area&apos;s premier destination for authentic Lao-Thai
           cuisine.
         </p>
         <Link href="/contact" className="btn-primary">
