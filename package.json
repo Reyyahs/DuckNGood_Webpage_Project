@@ -1,7 +1,7 @@
 {
   "name": "duckngood-webpage",
   "version": "1.0.0",
-  "description": "Modern French restaurant website specializing in duck cuisine",
+  "description": "Website for DucknGood, an authentic Lao-Thai restaurant specializing in roasted duck",
   "private": true,
   "author": "DuckNGood Team",
   "license": "MIT",

@@ -12,11 +12,21 @@ export interface FeaturesSectionProps {
   className?: string;
 }
 
-const EYEBROWS = ['Farm to Table', 'Award Winning', 'World Class', 'Curated Cellar'];
+const EYEBROWS = ['Farm to Table', 'Award Winning', 'World Class', 'Bold Flavors'];
 
-export default function FeaturesSection({ features }: FeaturesSectionProps) {
+export function FeatureCard({ icon: Icon, title, description }: FeatureCardProps) {
   return (
-    <div className="features-strip">
+    <div className="feature-card">
+      <Icon className="feature-card-icon" aria-hidden="true" />
+      <h3 className="feature-card-title">{title}</h3>
+      <p className="feature-card-desc">{description}</p>
+    </div>
+  );
+}
+
+export default function FeaturesSection({ features, className }: FeaturesSectionProps) {
+  return (
+    <div className={`features-strip${className ? ` ${className}` : ''}`}>
       {features.map((f, i) => (
         <div key={i} className="features-strip-item">
           <span className="features-strip-eyebrow">{EYEBROWS[i] ?? f.title}</span>

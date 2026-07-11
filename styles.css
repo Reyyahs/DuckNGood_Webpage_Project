@@ -1,6 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+ * Tailwind CSS v4. We deliberately import only the theme + utilities layers and
+ * skip Preflight (the base reset): this site is styled almost entirely by the
+ * hand-written CSS below and in app/styles/*, and Preflight would reset those.
+ * Theme tokens mirror the real design (gold/charcoal, Jost/Bodoni) so utility
+ * classes like `bg-dark-900`, `text-accent-500`, and `selection:bg-brand-500`
+ * resolve to the actual palette instead of Tailwind defaults.
+ */
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+  --color-brand-400: #d4ac58;
+  --color-brand-500: #c89b3c;
+  --color-brand-600: #8a6b28;
+  --color-accent-500: #c89b3c;
+  --color-dark-800: #1e1b18;
+  --color-dark-900: #161412;
+
+  --font-sans: 'Jost', system-ui, sans-serif;
+  --font-serif: 'Bodoni Moda', Georgia, serif;
+}
 
 :root {
   --gold: #c89b3c;

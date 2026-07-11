@@ -1,6 +1,6 @@
 # DuckNGood Restaurant Website
 
-A modern, responsive web application for DuckNGood, a Michelin-starred French restaurant specializing in duck cuisine.
+A modern, responsive web application for DuckNGood, an authentic Lao-Thai restaurant in Hickory, NC specializing in signature roasted duck.
 
 ## 🚀 Features
 
